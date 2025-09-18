@@ -30,15 +30,16 @@ def main():
         elif operation == "divide":
             try:
                 result = divide(num1, num2)
-            except ValueError as e:
+            except ValueError as e:                #for divide by 0 operation
                 print(e)
                 continue
         else:
             print(f"Unknown operation '{operation}'. Supported: add, subtract, multiply, divide.")
             continue
 
-        # Print result
-        print(f"Result: {result}")
+        # Print final result
+        print(f"Result: {result}")     
 
 if __name__ == "__main__":
     main()
+
