@@ -31,5 +31,14 @@ jobs:
 
       - name: Run tests with pytest and enforce 100% coverage
         run: |
-          pytest --cov=app --cov-fail-under=100
+          export PYTHONPATH=$(pwd)
+          pytest --cov=app --cov-fail-under=100 --cov-report=term --cov-report=html
+
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report
+          path: htmlcov/
+
 
