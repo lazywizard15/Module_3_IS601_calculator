@@ -1,14 +1,10 @@
-""" 
-This file is the "app/calculator.py" file. It contains a simple calculator that can add, subtract, multiply, 
-and divide numbers based on what the user types.
-"""
 
 
 from app.operations import Operations
 
 
 def calculator():
-    """Basic REPL calculator that performs addition, subtraction, multiplication, and division."""
+    """ REPL calculator that performs addition, subtraction, multiplication, and division."""
     
    
     print("Welcome to the calculator! Type 'exit' to quit")
@@ -20,7 +16,7 @@ def calculator():
 
         
         if user_input.lower() == "exit":
-            print("Exiting calculator...")
+            print("Exiting calculator")
             break
            
 
